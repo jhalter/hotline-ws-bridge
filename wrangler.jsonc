@@ -1,0 +1,19 @@
+{
+	// hotline-ws-bridge: WebSocket-to-TCP bridge for browser Hotline clients.
+	// See README.md "Setup" for how to configure this for your deployment —
+	// either keep workers_dev for a free *.workers.dev URL, or replace it with
+	// a `routes` entry on your own zone.
+	"name": "hotline-ws-bridge",
+	"main": "src/index.js",
+	"compatibility_date": "2026-08-19",
+	"workers_dev": true,
+	"observability": {
+		"enabled": true
+	}
+	// Optional vars:
+	//   DEFAULT_HOST  — server used when a client omits ?host= (otherwise the
+	//                   bridge requires an explicit host).
+	//   ALLOWED_HOSTS — comma-separated hostname allowlist; setting it closes
+	//                   the open relay to just those hosts.
+	// "vars": { "DEFAULT_HOST": "hotline.example.org", "ALLOWED_HOSTS": "hotline.example.org" }
+}
